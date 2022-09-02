@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Book</title>
+    <link rel="edit" href="/views/index.ejs">
+    <style>
+        body {
+            background-color: rgba(45, 43, 43, 0.687);
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+        h1 {
+            text-align: center;
+            color: blanchedalmond;
+        }
+    
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            text-align: center;
+            margin-left: 48px;
+        }
+    
+        th,
+        td {
+            padding: 8px;
+        }
+    
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+        label {
+            color: blanchedalmond;
+            text-align: center;
+        }
+      .inpt {
+          background-color: darkgrey;
+          color: rgb(74, 64, 64);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          
+        }
+        .btn {
+          background-color: rgb(63, 4, 4);
+          color:blanchedalmond;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+
+    <br>
+    <h1>Edit Your Book Now !</h1>
+
+
+<br>
+<br>
+<form 
+action="/edit/:id"
+ method="post">
+
+
+    <label for="name"> Name :</label> 
+
+    <input 
+    class="inpt"
+        type="String" 
+        name="Name"
+        value="<%= doc.Name %>" />
+        <br />
+        <br />
+ 
+    
+    <label for="author">Author :</label>
+    <input
+    class="inpt"
+         type="String" 
+         name="Author" 
+        value="<%= doc.Author %>" />
+    
+        <br>
+        <br>
+        <br>
+
+        <input 
+        class="btn"
+        type="submit" 
+        value="Update"/>
+
+    </form>
+  
+</body>
+</html>

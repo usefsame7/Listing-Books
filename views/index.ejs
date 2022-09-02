@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing Books</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <style>
+      body {
+        background-color: rgba(45, 43, 43, 0.687);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: blanchedalmond;
+      }
+      table {
+        border-collapse: collapse;
+        width: 90%;
+        text-align: center;
+        margin-left: 48px;
+      }
+      th,
+      td {
+        padding: 8px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+      label {
+        color: blanchedalmond;
+        text-align: center;
+      }
+      .add-btn {
+        background-color: rgb(63, 4, 4);
+        color: blanchedalmond;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 9px;
+      }
+      .inpt {
+        background-color: darkgrey;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .fa {
+        color: blanchedalmond;
+        text-decoration: none;
+        padding-left: 25px;
+        padding-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="edit" href="/app.js" />
+
+    <h1>List Your Books Now !</h1>
+    <form action="/" method="post">
+      <label for="name"> Name :</label>
+      <input class="inpt" type="String" name="Name" placeholder="Book Name" />
+
+      <br />
+      <br />
+
+      <label for="author">Author : </label>
+      <input
+        class="inpt"
+        type="String"
+        name="Author"
+        placeholder="Author Name"
+      />
+      <br />
+      <br />
+      <input class="add-btn" type="submit" value="Add" />
+    </form>
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Id</th>
+          <th scope="col">Edit Or Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% booksList.forEach(book=> { %>
+        <tr>
+          <td scope="row"><%= book.Name %></td>
+          <td><%= book.Author %></td>
+          <td><%= book._id %></td>
+          <td>
+            <a href="/edit/<%= book._id %> " style="font-size: 26px" class="fa"
+              >&#xf044;</a
+            > 
+            <a 
+            href=""
+            class="fa fa-trash-o" style="font-size: 27px"></a>
+
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
