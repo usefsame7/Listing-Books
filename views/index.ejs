@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listing Books</title>
+    <title>List Your Books</title>
+    <link
+      rel="icon"
+      href="https://freeiconshop.com/wp-content/uploads/edd/book-open-outline-filled.png"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+
     <style>
       body {
         background-color: rgba(45, 43, 43, 0.687);
@@ -25,6 +30,7 @@
         width: 90%;
         text-align: center;
         margin-left: 48px;
+        background-color: rgb(121, 112, 102);
       }
       th,
       td {
@@ -58,8 +64,6 @@
     </style>
   </head>
   <body>
-    <link rel="edit" href="/app.js" />
-
     <h1>List Your Books Now !</h1>
     <form action="/" method="post">
       <label for="name"> Name :</label>
@@ -98,12 +102,14 @@
           <td><%= book._id %></td>
           <td>
             <a href="/edit/<%= book._id %> " style="font-size: 26px" class="fa"
-              >&#xf044;</a
-            > 
-            <a 
-            href=""
-            class="fa fa-trash-o" style="font-size: 27px"></a>
-
+              >&#xf044;
+            </a>
+            <a
+              href="/delete/<%= book._id %> "
+              class="fa fa-trash-o"
+              style="font-size: 27px"
+            >
+            </a>
           </td>
         </tr>
         <% }) %>
