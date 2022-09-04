@@ -1,5 +1,4 @@
 const express = require("express");
-const session = require("express-session");
 const mongoose = require("mongoose");
 require("./db/connect");
 const app = express();
@@ -15,7 +14,6 @@ app.listen(port, () => console.log(`App is listening on port ${port} ...`));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 
 
