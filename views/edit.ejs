@@ -8,14 +8,14 @@
     <link rel="edit" href="/views/index.ejs" />
     <style>
       body {
-        background-color: rgba(45, 43, 43, 0.687);
+        background-color: #3B9C9C;
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
 
       h1 {
         text-align: center;
-        color: blanchedalmond;
+        color: #151B54;
       }
 
       table {
@@ -36,17 +36,17 @@
         border: 1px solid;
       }
       label {
-        color: blanchedalmond;
+        color: #151B54;
         text-align: center;
       }
       .inpt {
-        background-color: darkgrey;
+        background-color: #82CAFF;
         color: rgb(74, 64, 64);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
       .btn {
-        background-color: rgb(63, 4, 4);
-        color: blanchedalmond;
+        background-color: #151B54;
+        color:  #82CAFF;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         border-radius: 9px;
       }
@@ -59,14 +59,14 @@
     <br />
     <br />
     <form action="/edit/<%= doc._id %> " method="post">
-      <label for="name"> Name :</label>
+      <label for="name"> <strong>Name :</strong></label>
 
       <input class="inpt" type="String" name="Name" value="<%= doc.Name %>" />
 
       <br />
       <br />
 
-      <label for="author">Author :</label>
+      <label for="author"><strong>Author :</strong></label>
       <input
         class="inpt"
         type="String"
