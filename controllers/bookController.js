@@ -35,8 +35,7 @@ const getOneToUpdate = (req, res) => {
         res.render("edit", {
           doc: doc,
         });
-      }
-    }
+     }}
   });
 };
 
@@ -45,17 +44,11 @@ const updateOne = (req, res) => {
   let id = req.params.id;
   Book.findByIdAndUpdate(
     id,
-    req.body,
-    {
-      Name: req.body.name,
-      Author: req.body.author,
-    },
-    (error, result) => {
+    req.body, { Name: req.body.name, Author: req.body.author }, (error, result) => {
       if (error || !result) {
         console.log(error);
       }
-    }
-  );
+    });
   res.redirect("/");
 };
 
