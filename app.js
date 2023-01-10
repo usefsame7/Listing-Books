@@ -1,6 +1,5 @@
 const express = require("express")
 const mongoose = require("mongoose")
-require("./db/connect")
 const app = express()
 const bookRoutes = require('./routs/bookRoutes')
 
