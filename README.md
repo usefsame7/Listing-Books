@@ -55,6 +55,7 @@ Once you have the application running, you can perform various operations on the
 - **Frontend:** JS, HTML, CSS, EJS
 - **Backend:** Node.js, Express
 - **Database:** MongoDB (Mongoose)
+- **Architectural Pattern:** MVC (Model-View-Controller) 
 
 
 
