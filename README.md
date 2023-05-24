@@ -52,7 +52,7 @@ Once you have the application running, you can perform various operations on the
 
 ## Technologies Used
 
-- **Frontend:** JS, HTML, CSS
+- **Frontend:** JS, HTML, CSS, EJS
 - **Backend:** Node.js, Express
 - **Database:** MongoDB (Mongoose)
 
